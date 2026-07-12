@@ -1,39 +1,4 @@
-# GitHub Universal Code Workspace Viewer
 
-A terminal-based workspace viewer that scans a GitHub repository recursively, builds an on-the-fly local layout tree, and reads/filters source files for Swift, Python, and C++.
-
-## 🚀 Features
-- **Zero Xcode dependency:** Runs directly inside your standard macOS/Linux Terminal.
-- **Language Filtering:** Groups and lists files by extensions (`.swift`, `.py`, `.cpp`, `.hpp`, `.h`).
-- **Tree-view Visualization:** Pretty-prints the remote repository structure right in the console.
-
-## 🛠️ Prerequisites
-Make sure you have Python 3.x installed. You will also need the `requests` library to handle GitHub API calls.
-
-```bash
-pip install requests
-
-Perbualan dengan Gemini
-Create a code-workspace-viewer-macos All Files in GitHub
-
-To build a native macOS Code Workspace Viewer that displays all files in a GitHub repository, the most efficient approach is using SwiftUI combined with Apple's standard NavigationSplitView.
-
-Below is a complete, production-ready implementation for a macOS app. It fetches a repository's file tree using the GitHub REST API and displays it in a classic sidebar-and-detail IDE layout.
-
-🛠️ The Architecture
-To create this app, we will build:
-
-A Data Model: To handle the hierarchical tree structure of GitHub files.
-
-An API Client: To asynchronously fetch the repository structure.
-
-The UI Layer: A three-pane layout (Sidebar navigation → File Tree → Code Content Viewer) with syntax highlighting.
-
-💻 The Code Implementation
-1. The File Model (GitHubFile.swift)
-First, we define a recursive structure to handle files and folders.
-
-Swift
 import Foundation
 
 struct GitHubFile: Identifiable, Hashable, Codable {
